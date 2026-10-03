@@ -15,10 +15,17 @@ public class BookService {
         this.listBooks = listBooks;
     }
 
-    public void addBook() {
-        String name = ConsoleReader.readString("Cual es el nombre del libro?");
-        listBooks.add(new Book(name));
-        System.out.println("El libro ha sido añadido");
+    public void addBook(String name) {
+        boolean result = false;
+        for (Book b : listBooks) {
+            if (b.getName().equalsIgnoreCase(name)) {
+                result = true;
+                break;
+            }
+        }
+        if (!result) {
+            listBooks.add(new Book(name));
+        }
     }
 
     public void showBooks() {
@@ -31,39 +38,30 @@ public class BookService {
         }
     }
 
-    public void showBookByPosition() {
-        int position = ConsoleReader.readInt("Que posiciòn");
-        System.out.println(listBooks.get(position));
+    public String showBookByPosition(int position) {
+        return listBooks.get(position).getName();
     }
 
-    public void addBookToPosition() {
-        String name = ConsoleReader.readString("Como se llama el libro?");
-        int position = ConsoleReader.readInt("En que posiciòn?");
+    public void addBookToPosition(String name, int position) {
         listBooks.add(position,new Book(name));
     }
 
-    public void deleteBookByName() {
+    public void deleteBookByName(String name) {
         if (!listBooks.isEmpty()) {
-            String name = ConsoleReader.readString("Como se llama el libro?");
-            for (Book b : listBooks) {
-                if (b.getName().equalsIgnoreCase(name)) {
-                    listBooks.remove(b);
-                }
-            }
+            listBooks.removeIf(b -> b.getName().equalsIgnoreCase(name));
         } else {
             System.err.println("La lista està vacía");
         }
     }
 
-    public void showBookAZ() {
+    public List<Book> showBookAZ() {
         if (!listBooks.isEmpty()) {
             List<Book> listBookAZ = new ArrayList<>(listBooks);
             listBookAZ.sort(Comparator.comparing(Book::getName));
-            for (Book b : listBookAZ) {
-                System.out.println(b.getName());
-            }
+            return listBookAZ;
         } else {
             System.err.println("La lista està vacía");
+            return null;
         }
     }
 }
