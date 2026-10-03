@@ -2,6 +2,9 @@ package N1.com.service;
 
 import N1.com.model.Book;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class BookService {
@@ -46,6 +49,18 @@ public class BookService {
                 if (b.getName().equalsIgnoreCase(name)) {
                     listBooks.remove(b);
                 }
+            }
+        } else {
+            System.err.println("La lista està vacía");
+        }
+    }
+
+    public void showBookAZ() {
+        if (!listBooks.isEmpty()) {
+            List<Book> listBookAZ = new ArrayList<>(listBooks);
+            listBookAZ.sort(Comparator.comparing(Book::getName));
+            for (Book b : listBookAZ) {
+                System.out.println(b.getName());
             }
         } else {
             System.err.println("La lista està vacía");
