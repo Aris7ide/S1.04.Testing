@@ -1,4 +1,4 @@
-package N1.com.main;
+package N1.EX1.main;
 
 public class Main {
 }

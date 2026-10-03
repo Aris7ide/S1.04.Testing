@@ -1,4 +1,4 @@
-package N1.com.model;
+package N1.EX1.model;
 
 public class Book {
 

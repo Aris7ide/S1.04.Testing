@@ -1,6 +1,6 @@
-package N1.com.service;
+package N1.EX1.service;
 
-import N1.com.model.Book;
+import N1.EX1.model.Book;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

@@ -44,4 +44,4 @@ Implementa test unitarios con JUnit 5 para validar el comportamiento de la clase
 - He cancellado el ConsoleRader ya que no me servia absolutamente a nada
 - He modificado toda la logica para que no tenga ningun scanner
 - He hecho la clase de tests con todos los test
-- He entendido lo mal que lo habia hecho haha
+- He entendido lo mal que lo había hecho haha
