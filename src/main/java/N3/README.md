@@ -41,4 +41,5 @@ A medida que vayas implementando la clase, cubre los siguientes comportamientos 
 - he creado la prueba shouldAddToResult y el metodo .add()
 - he hecho lo mismo con rest,mutiply y divide.
 - El test shoudlGiveException valida la excepcion ArithmeticException
-- 
+- He creado el metodo reset() y testeado con shouldReset().
+- El metodo getResult siempre ha devuelto el total actual

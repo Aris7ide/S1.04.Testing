@@ -47,4 +47,11 @@ class CalculatorTest {
         assertThatThrownBy(() -> calculator.divide(0)).isInstanceOf(ArithmeticException.class);
     }
 
+    @Test
+    void shouldReset() {
+        calculator.add(30);
+        calculator.reset();
+        assertEquals(0,calculator.getResult());
+    }
+
 }

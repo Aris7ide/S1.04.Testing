@@ -31,4 +31,8 @@ public class Calculator {
     public void divide(int value) {
         this.result = result / value;
     }
+
+    public void reset() {
+        this.result = 0;
+    }
 }
