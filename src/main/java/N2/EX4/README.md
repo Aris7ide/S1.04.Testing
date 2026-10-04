@@ -1,4 +1,4 @@
-## Ejercicio 3
+## Ejercicio 4
 Crea un arrayList contenedor de varios tipos de objetos (créalos también). Escribe una aserción para verificar el orden de los objetos en ArrayList según han sido insertados.
 
 - Verifica ahora que la lista anterior contiene los objetos en cualquier orden.
