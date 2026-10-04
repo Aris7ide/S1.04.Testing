@@ -40,3 +40,5 @@ A medida que vayas implementando la clase, cubre los siguientes comportamientos 
 - he creado la clase test y ahi comprobado que efectivamente se crea la clase con 0.
 - he creado la prueba shouldAddToResult y el metodo .add()
 - he hecho lo mismo con rest,mutiply y divide.
+- El test shoudlGiveException valida la excepcion ArithmeticException
+- 

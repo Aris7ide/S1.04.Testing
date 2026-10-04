@@ -2,6 +2,8 @@ package N3;
 
 import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.jupiter.api.Assertions.*;
 
 class CalculatorTest {
@@ -38,6 +40,11 @@ class CalculatorTest {
         calculator.add(10);
         calculator.divide(2);
         assertEquals(5, calculator.getResult());
+    }
+
+    @Test
+    void shouldGiveException() {
+        assertThatThrownBy(() -> calculator.divide(0)).isInstanceOf(ArithmeticException.class);
     }
 
 }
