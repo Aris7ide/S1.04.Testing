@@ -19,4 +19,16 @@ public class Calculator {
     public void add(int value) {
         this.result = result + value;
     }
+
+    public void rest(int value) {
+        this.result = result - value;
+    }
+
+    public void multiply(int value) {
+        this.result = result * value;
+    }
+
+    public void divide(int value) {
+        this.result = result / value;
+    }
 }
