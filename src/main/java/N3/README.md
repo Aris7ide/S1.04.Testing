@@ -35,4 +35,6 @@ A medida que vayas implementando la clase, cubre los siguientes comportamientos 
 - **Llenguatge**: Java 25
 - **IDE**: IntelliJ IDEA
 
-## Excecution
+## Execution
+- He hecho la clase Calculator con un solo atributo result que al instanciar la clase es 0.
+- he creado la clase test y ahi comprobado que efectivamente se crea la clase con 0.
