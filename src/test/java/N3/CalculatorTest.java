@@ -13,4 +13,10 @@ class CalculatorTest {
         assertEquals(0, calculator.getResult());
     }
 
+    @Test
+    void shouldAddToResult() {
+        calculator.add(10);
+        assertEquals(10, calculator.getResult());
+    }
+
 }

@@ -38,3 +38,5 @@ A medida que vayas implementando la clase, cubre los siguientes comportamientos 
 ## Execution
 - He hecho la clase Calculator con un solo atributo result que al instanciar la clase es 0.
 - he creado la clase test y ahi comprobado que efectivamente se crea la clase con 0.
+- he creado la prueba shouldAddToResult y el metodo .add()
+- 
