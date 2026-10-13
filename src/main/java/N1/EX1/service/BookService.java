@@ -3,6 +3,7 @@ package N1.EX1.service;
 import N1.EX1.model.Book;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class BookService {
@@ -27,6 +28,22 @@ public class BookService {
         }
         Book book = this.bookList.get(bookId);
         return book.getName();
+    }
+
+    public void addBookAtPosition (int bookId, Book book) {
+        this.bookList.add(bookId, book);
+    }
+
+    public void removeBook(int bookId) {
+        this.bookList.remove(bookId);
+    }
+
+    public List<Book> sortBookByName() {
+        List<Book> copy = new ArrayList<>(this.bookList);
+
+        copy.sort(Comparator.comparing(Book::getName, String.CASE_INSENSITIVE_ORDER));
+
+        return copy;
     }
 
 
