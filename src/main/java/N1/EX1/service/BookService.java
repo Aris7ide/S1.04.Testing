@@ -15,6 +15,11 @@ public class BookService {
     }
 
     public void addBook(Book book) {
+        for (Book b : bookList) {
+            if (book.equals(b)){
+                throw new RuntimeException("Book already exists");
+            }
+        }
         this.bookList.add(book);
     }
 
