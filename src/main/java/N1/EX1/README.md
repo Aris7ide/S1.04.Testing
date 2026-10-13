@@ -37,4 +37,7 @@ Implementa test unitarios con JUnit 5 para validar el comportamiento de la clase
 - **IDE**: IntelliJ IDEA
 
 ## Excecution
-
+- he creado las dos clases Book y BookService
+- esta vez he hecho private el List<Book> y los atributos de Book, añadiendo el autor de los libros
+- ahora cada vez que llamo algo en un metodo llamo el Book. 
+- los tests asi tienen mas sentido llamando los metodos y verificando que efectivamente funcionan.
